@@ -4,7 +4,7 @@ print("***************-------Madlib--------********************")
 print("Welcome to Madlib Cli Game")
 print("Mad libs generator is a fun game that is usually played by kids.")
 print("***************-------How to play--------********************")
-print("Just write the words")
+print("Just write the required words to get all the results in the end")
 print("***************-----------------********************")
 
 
@@ -38,7 +38,6 @@ def merge(content, new_tuple):
 
 def input_handle(new_tuple):
     # This function to handle user input return new list
-
     user_inputs = []
     for word in new_tuple:
         user_input = input(f"Enter the  ({word}) :")
