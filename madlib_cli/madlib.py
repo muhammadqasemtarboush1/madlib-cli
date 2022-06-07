@@ -47,8 +47,15 @@ def input_handle(new_tuple):
 
 def start_game():
     # This function for starting all the game functionalities
-    print(merge(parse_template(read_template("assets/user_interaction.txt"))[0],
-                input_handle(parse_template(read_template("assets/user_interaction.txt"))[1])))
+    return (merge(parse_template(read_template("assets/user_interaction.txt"))[0],
+                  input_handle(parse_template(read_template("assets/user_interaction.txt"))[1])))
 
 
-start_game()
+def new_content():
+    user_content = start_game()
+    with open("assets/user_new_story.txt", "a") as f:
+        f.write(user_content)
+        print(user_content)
+
+
+new_content()
